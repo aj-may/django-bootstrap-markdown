@@ -2,7 +2,9 @@
 
 ## A beautiful Markdown editor with a side by side preview
 
-An extension of the Django Textarea widget made for editing Markdown with a live preview.
+An extension of the Django Textarea widget made for editing [Markdown](http://daringfireball.net/projects/markdown/) with a live preview.
+
+![Example](http://thegoods.aj7may.com/content/images/2013/Dec/Screen_Shot_2013_12_21_at_2_39_47_PM.png)
 
 ### Install:
 `> pip install django-bootstrap-markdown`
