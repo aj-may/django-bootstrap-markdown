@@ -36,5 +36,6 @@ class MarkdownInput(Textarea):
     class Media:
         js = (
             '//cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js',
+            'js/jquery.textarea.min.js',
             'js/django_bootstrap_markdown_editor.js',
         )

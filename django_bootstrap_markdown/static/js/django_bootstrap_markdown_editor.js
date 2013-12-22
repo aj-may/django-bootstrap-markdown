@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$('.md-edit textarea').tabby({tabString:'    '});
+
 	function updateMarkdown() {
 		$('.md-edit').each(function() {
 			$(this).find('.preview').html( marked( $(this).find('textarea').val() ) );

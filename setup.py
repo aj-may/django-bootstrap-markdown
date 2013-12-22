@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "django-bootstrap-markdown",
-    version = "1.0.0",
+    version = "1.0.4",
     packages = find_packages(),
     author = "A.J. May",
     author_email = "aj7may@gmail.com",
