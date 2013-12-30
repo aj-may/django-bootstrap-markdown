@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Insert Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="//code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      {% if not image %}
+      <div class="col-xs-12">
+        <h1>Insert Image</h1>
+        <form role="form" enctype="multipart/form-data" method="POST">
+          {% include "markdown_form.html" with form=form %}
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Upload</button>
+        </form>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- js -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    {% if image %}
+    <script type="text/javascript">
+      window.opener.markdown_image_callback("{{ MEDIA_URL }}{{ image.billboard }}", "{{ MEDIA_URL }}{{ image.original }}", "{{ image.description }}");
+      window.close()
+    </script>
+    {% endif %}
+    
+  </body>
+</html>
