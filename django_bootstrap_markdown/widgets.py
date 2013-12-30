@@ -2,25 +2,34 @@ from django.forms import Textarea
 from django.utils.safestring import mark_safe
 
 class MarkdownInput(Textarea):
+    def __init__(self, attrs=None, image_control=False):
+        self.image_control = image_control
+
+        default_attrs = {
+            'class': 'form-control',
+            'style': 'height: 400px; resize: none;',
+        }
+        if attrs:
+            default_attrs.update(attrs)
+
+        super(Textarea, self).__init__(default_attrs)
+
     def render(self, name, value, attrs=None):
-        try:
-            self.attrs['class'] = 'form-control %s' % self.attrs['class']
-        except KeyError:
-            self.attrs['class'] = 'form-control'
-
-        try:
-            self.attrs['style'] = 'height: 400px; resize: none; %s' % self.attrs['style']
-        except KeyError:
-            self.attrs['style'] = 'height: 400px; resize: none;'
-
         textarea = Textarea.render(self, name, value)
+
+        if self.image_control:
+            image_control_markup = """
+            <div class="pull-right">
+                <button type="button" class="btn btn-sm btn-default markdown-image-btn"><span class="glyphicon glyphicon-picture"></span> Add Image</button>
+            </div>
+            """
+        else:
+            image_control_markup = ""
 
         markup = """
         <div class="row md-edit">
             <div class="col-sm-6">
-                <div class="pull-right">
-                    <button type="button" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-picture"></span> Add Image</button>
-                </div>
+                %s
                 <h5 class="text-muted">Markdown</h5>
                 %s
             </div>
@@ -29,7 +38,7 @@ class MarkdownInput(Textarea):
                 <div class="form-control preview" style="height: 400px; overflow: auto;"></div>
             </div>
         </div>
-        """ % textarea
+        """ % (image_control_markup, textarea)
 
         return mark_safe( markup )
 
