@@ -12,6 +12,10 @@ $(document).ready(function() {
 		updateMarkdown();
 	})
 
+	$('.md-edit textarea').change(function() {
+		updateMarkdown();
+	})
+
 	$('.md-edit').each(function() {
 		$(this).find('textarea').scroll(function(e) {
 			var percent = $(this).scrollTop() / ( $(this)[0].scrollHeight-$(this).height() );
