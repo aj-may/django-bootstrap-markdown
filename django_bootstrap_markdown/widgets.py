@@ -2,7 +2,7 @@ from django.forms import Textarea
 from django.utils.safestring import mark_safe
 
 class MarkdownInput(Textarea):
-    def __init__(self, attrs=None, image_control=False):
+    def __init__(self, attrs=None, image_control=True):
         self.image_control = image_control
 
         default_attrs = {

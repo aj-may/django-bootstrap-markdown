@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name = "django-bootstrap-markdown",
-    version = "1.1.1",
-    packages = find_packages(),
+    version = "1.2.0",
+    packages = find_packages(exclude=["django_markdown_project"]),
     author = "A.J. May",
     author_email = "aj7may@gmail.com",
     description = "An extension of the Django Textarea widget made for editing Markdown with a live preview.",
@@ -14,4 +14,5 @@ setup(
     package_data = {
         'django_bootstrap_markdown': ['static/js/*'],
     },
+    install_requires = ['Django>=1.6.1','Pillow>=2.2.2','South>=0.8.4','django-imagekit>=3.1'],
 )
