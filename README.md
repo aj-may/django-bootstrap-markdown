@@ -15,6 +15,15 @@ An extension of the Django Textarea widget made for editing [Markdown](http://da
 * Instead of using the django `Textarea` widget use the `MarkdownInput`
 * Be sure to include the form's required media in the template. _ie._ `{{ form.media }}`
 * Also be sure to include [Twitter Bootstrap](http://getbootstrap.com/)
+* Include the markdown urls:
+
+_urls.py_
+
+	urlpatterns = patterns('',
+	    ...
+	    url(r'^markdown/', include('django_bootstrap_markdown.urls')),
+	    ...
+	)
 
 ### Example:
 
