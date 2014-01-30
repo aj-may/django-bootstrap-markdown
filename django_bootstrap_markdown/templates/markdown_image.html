@@ -31,10 +31,15 @@
 
     <!-- js -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('#id_size').addClass('list-inline');
+    })
+    </script>
 
     {% if image %}
     <script type="text/javascript">
-      window.opener.markdown_image_callback("{{ MEDIA_URL }}{{ image.billboard }}", "{{ MEDIA_URL }}{{ image.original }}", "{{ image.description }}");
+      window.opener.markdown_image_callback("{{ MEDIA_URL }}{{ thumbnail }}", "{{ MEDIA_URL }}{{ image.original }}", "{{ image.description }}");
       window.close()
     </script>
     {% endif %}

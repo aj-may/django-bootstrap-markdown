@@ -16,9 +16,21 @@ def markdown_image(request):
             image.description = form.cleaned_data['description']
             image.save()
 
+            if form.cleaned_data['size'] == 'Small':
+                thumbnail = image.small
+            elif form.cleaned_data['size'] == 'Medium':
+                thumbnail = image.medium
+            elif form.cleaned_data['size'] == 'Large':
+                thumbnail = image.large
+            elif form.cleaned_data['size'] == 'Original':
+                thumbnail = image.original
+            else:
+                thumbnail = image.billboard
+
             return render(request, 'markdown_image.html', {
                 'form': form,
                 'image': image,
+                'thumbnail': thumbnail,
             })
     else:
         form = ImageForm()
