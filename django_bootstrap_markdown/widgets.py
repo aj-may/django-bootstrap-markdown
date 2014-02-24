@@ -1,6 +1,7 @@
 from django.forms import Textarea
 from django.utils.safestring import mark_safe
 
+
 class MarkdownInput(Textarea):
     def __init__(self, attrs=None, image_control=True):
         self.image_control = image_control
@@ -20,7 +21,10 @@ class MarkdownInput(Textarea):
         if self.image_control:
             image_control_markup = """
             <div class="pull-right">
-                <button type="button" class="btn btn-sm btn-default markdown-image-btn"><span class="glyphicon glyphicon-picture"></span> Add Image</button>
+                <button type="button" class="btn btn-sm btn-default markdown-image-btn">
+                    <span class="glyphicon glyphicon-picture"></span>
+                    Add Image
+                </button>
             </div>
             """
         else:
@@ -40,7 +44,7 @@ class MarkdownInput(Textarea):
         </div>
         """ % (image_control_markup, textarea)
 
-        return mark_safe( markup )
+        return mark_safe(markup)
 
     class Media:
         js = (
