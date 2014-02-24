@@ -29,7 +29,9 @@ $.fn.extend({
 });
 
 // using it
-$('.md-edit').markdown_preview();
+$(document).ready(function() {
+	$('.md-edit').markdown_preview();
+});
 
 // callback function
 window.markdown_image_callback = function(sized, original, alt) {

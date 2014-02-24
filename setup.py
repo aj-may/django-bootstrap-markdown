@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-bootstrap-markdown",
-    version="1.3.1",
+    version="1.3.2",
     packages=find_packages(exclude=["django_markdown_project"]),
     author="A.J. May",
     author_email="aj7may@gmail.com",
