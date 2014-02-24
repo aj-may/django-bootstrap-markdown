@@ -29,7 +29,7 @@ $.fn.extend({
 });
 
 // using it
-$('#form').find('.md-edit').markdown_preview();
+$('.md-edit').markdown_preview();
 
 // callback function
 window.markdown_image_callback = function(sized, original, alt) {
