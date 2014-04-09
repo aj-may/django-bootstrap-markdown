@@ -14,8 +14,8 @@ $.fn.extend({
 			};
 			$textarea.tabby({tabString: opts.tabString});
 			$textarea.on('scroll', function(e) {
-				var percent = $this.scrollTop() / ( $textarea.scrollHeight-$textarea.height() );
-				$preview.scrollTop( ($preview.scrollHeight - $preview.height()) * percent );
+				var percent = $textarea.scrollTop() / ( $textarea.prop('scrollHeight')-$textarea.height() );
+				$preview.scrollTop( ($preview.prop('scrollHeight') - $preview.height()) * percent );
 			});
 			$image_button.click(function() {
 				window.markdown_textarea = $(this).parent().parent().find('textarea');

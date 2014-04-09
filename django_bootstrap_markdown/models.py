@@ -2,6 +2,7 @@ from django.db import models
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill, ResizeToFit
 
+
 class Image(models.Model):
     original = models.ImageField(upload_to='markdown/images/')
     large = ImageSpecField(

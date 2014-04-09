@@ -8,7 +8,7 @@ class MarkdownInput(Textarea):
 
         default_attrs = {
             'class': 'form-control',
-            'style': 'height: 400px; resize: none;',
+            'style': 'height: 400px; resize: none; font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-weight: bold;',
         }
         if attrs:
             default_attrs.update(attrs)

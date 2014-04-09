@@ -2,6 +2,7 @@ from django.contrib import admin
 from imagekit.admin import AdminThumbnail
 from django_bootstrap_markdown.models import Image
 
+
 class ImageAdmin(admin.ModelAdmin):
     date_hierarchy = 'timestamp'
     list_display = ('admin_thumbnail', 'original', 'description')
