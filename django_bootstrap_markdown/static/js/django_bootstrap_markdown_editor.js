@@ -1,7 +1,7 @@
 $.fn.extend({
 	markdown_preview: function(options) {
 		var defaults = {
-			tabString: '       '
+			tabString: '    '
 		};
 		var opts = $.extend(defaults, options);
 		this.each(function() {
