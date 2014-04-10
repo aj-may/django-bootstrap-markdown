@@ -50,5 +50,10 @@ class MarkdownInput(Textarea):
         js = (
             '//cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js',
             'js/jquery.textarea.min.js',
-            'js/django_bootstrap_markdown_editor.js',
+            'js/django_bootstrap_markdown.js',
         )
+        css = {
+            'all': (
+                'css/django_bootstrap_markdown.css',
+            )
+        }
