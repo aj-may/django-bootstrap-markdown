@@ -1,0 +1,35 @@
+{% extends 'markdown_image.html' %}
+
+{% block content %}
+{% if not image %}
+<div class="col-xs-12">
+<h1>Insert Image</h1>
+
+<div class="markdown-library-chooser">
+	{% for image in images %}
+	<a href="#" data-pk="{{ image.pk }}" title="{{ image.description }}"><img class="img-thumbnail" src="{{ image.small.url }}" alt="{{ image.description }}"></a>
+	{% endfor %}
+</div>
+
+<form role="form" method="POST">
+  {% include "markdown_form.html" with form=form %}
+  <button type="button" class="btn btn-default pull-right" onclick="window.close();">Cancel</button>
+  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-circle-arrow-down"></span> Insert Image</button>
+  or <a href="{% url 'django_bootstrap_markdown.views.markdown_image' %}">Upload a new Image</a>
+</form>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.markdown-library-chooser').on('click', 'a', function(e) {
+			e.preventDefault();
+			$('.markdown-library-chooser a').removeClass('selected');
+			$(this).addClass('selected');
+			$('#id_image').val($(this).attr('data-pk'));
+		})
+	})
+</script>
+{% endblock %}

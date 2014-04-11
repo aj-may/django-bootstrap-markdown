@@ -1,9 +1,14 @@
 {% for field in form %}
+{% if not field.is_hidden %}
 <div class="form-group">
 	<label for="{{ field.id_for_label }}">{{ field.label }}</label>
 	{{ field }}
 	{{ field.errors }}
 </div>
+{% else %}
+{{ field }}
+{{ field.errors }}
+{% endif %}
 {% endfor %}
 {% csrf_token %}
 {{ form.media }}

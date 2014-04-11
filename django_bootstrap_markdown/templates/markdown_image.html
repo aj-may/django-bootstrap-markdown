@@ -14,19 +14,25 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="{% static 'css/django_bootstrap_markdown.css' %}">
+
     <script src="//code.jquery.com/jquery.js"></script>
   </head>
   <body>
     <div class="container">
+      {% block content %}
       {% if not image %}
       <div class="col-xs-12">
         <h1>Insert Image</h1>
         <form role="form" enctype="multipart/form-data" method="POST">
           {% include "markdown_form.html" with form=form %}
+          <button type="button" class="btn btn-default pull-right" onclick="window.close();">Cancel</button>
           <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Upload</button>
+          or <a href="{% url 'django_bootstrap_markdown.views.markdown_library' %}">Choose from Media Library</a>
         </form>
       </div>
       {% endif %}
+      {% endblock %}
     </div>
 
     <!-- js -->
@@ -39,10 +45,11 @@
 
     {% if image %}
     <script type="text/javascript">
-      window.opener.markdown_image_callback("{{ MEDIA_URL }}{{ thumbnail }}", "{{ MEDIA_URL }}{{ image.original }}", "{{ image.description }}");
+      window.opener.markdown_image_callback("{{ thumbnail.url }}", "{{ image.original.url }}", "{{ image.description }}");
       window.close()
     </script>
     {% endif %}
     
+    {% block js %}{% endblock %}
   </body>
 </html>

@@ -12,18 +12,29 @@ $.fn.extend({
 			var update = function() {
 				$preview.html(marked($textarea.val()));
 			};
-			$textarea.tabby({tabString: opts.tabString});
-			$textarea.on('scroll', function(e) {
+			var updateScroll = function() {
 				var percent = $textarea.scrollTop() / ( $textarea.prop('scrollHeight')-$textarea.height() );
 				$preview.scrollTop( ($preview.prop('scrollHeight') - $preview.height()) * percent );
+			};
+			$textarea.tabby({tabString: opts.tabString});
+			$textarea.on('scroll', function(e) {
+				updateScroll();
 			});
 			$image_button.click(function() {
 				window.markdown_textarea = $(this).parent().parent().find('textarea');
 				window.markdown_cursor_pos = $(window.markdown_textarea).prop('selectionStart');
 				window.open('/markdown/image/');
 			});
-			$textarea.on('keyup change', update);
+			$textarea.on('keyup change', function() {
+				update();
+				updateScroll();
+			});
 			update();
+		});
+
+		$('.md-edit .preview').on('click', 'a:has(img)', function(e) {
+			e.preventDefault();
+			$(this).ekkoLightbox();
 		});
 	}
 });
