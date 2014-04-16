@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-bootstrap-markdown",
-    version="1.4.2",
-    packages=find_packages(exclude=["django_markdown_project"]),
+    version="1.5.0",
+    packages=find_packages(),
     author="A.J. May",
     author_email="aj7may@gmail.com",
     description="An extension of the Django Textarea widget made for editing Markdown with a live preview.",
@@ -13,7 +13,11 @@ setup(
     url="http://thegoods.aj7may.com/django-bootstrap-markdown",
     zip_safe=False,
     package_data={
-        'django_bootstrap_markdown': ['static/js/*', 'templates/*'],
+        'django_bootstrap_markdown': [
+            'static/js/*',
+            'static/css/*',
+            'templates/django_bootstrap_markdown/*'
+        ],
     },
     install_requires=[
         'Django>=1.6.1',

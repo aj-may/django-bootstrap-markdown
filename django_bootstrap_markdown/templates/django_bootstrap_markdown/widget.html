@@ -1,0 +1,19 @@
+<div class="row md-edit">
+    <div class="col-sm-6">
+    	{% if show_image_button %}
+        <div class="pull-right">
+		    <button type="button" class="btn btn-sm btn-default markdown-image-btn" data-href="{% url 'django_bootstrap_markdown.views.markdown_image' %}">
+		        <span class="glyphicon glyphicon-picture"></span>
+		        Add Image
+		    </button>
+		</div>
+		{% endif %}
+
+        <h5 class="text-muted">Markdown</h5>
+        {{ textarea }}
+    </div>
+    <div class="col-sm-6 hidden-xs">
+        <h5 class="text-muted">Preview</h5>
+        <div class="form-control preview"></div>
+    </div>
+</div>

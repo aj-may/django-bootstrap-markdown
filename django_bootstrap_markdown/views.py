@@ -29,15 +29,18 @@ def markdown_image(request):
             else:
                 thumbnail = image.billboard
 
-            return render(request, 'markdown_image.html', {
-                'form': form,
-                'image': image,
-                'thumbnail': thumbnail,
-            })
+            return render(
+                request,
+                'django_bootstrap_markdown/markdown_image.html', {
+                    'form': form,
+                    'image': image,
+                    'thumbnail': thumbnail,
+                }
+            )
     else:
         form = ImageForm()
 
-    return render(request, 'markdown_image.html', {
+    return render(request, 'django_bootstrap_markdown/markdown_image.html', {
         'form': form,
     })
 
@@ -60,15 +63,18 @@ def markdown_library(request):
             else:
                 thumbnail = image.billboard
 
-            return render(request, 'markdown_library.html', {
-                'form': form,
-                'image': image,
-                'thumbnail': thumbnail,
-            })
+            return render(
+                request,
+                'django_bootstrap_markdown/markdown_library.html', {
+                    'form': form,
+                    'image': image,
+                    'thumbnail': thumbnail,
+                }
+            )
     else:
         form = LibraryForm()
 
-    return render(request, 'markdown_library.html', {
+    return render(request, 'django_bootstrap_markdown/markdown_library.html', {
         'images': Image.objects.all(),
         'form': form,
     })

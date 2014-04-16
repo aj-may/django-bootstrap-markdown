@@ -1,4 +1,16 @@
-.form-control.preview img {
+.md-edit .preview {
+	height: 400px;
+	overflow: auto;
+}
+
+.md-edit textarea {
+	height: 400px;
+	resize: none;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-weight: bold;
+}
+
+.md-edit .preview img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 4px;
@@ -19,6 +31,6 @@
 	margin-bottom: 5px;
 }
 
-.markdown-library-chooser a.selected img {
+.markdown-library-chooser .selected img {
 	background-color: #66afe9;
 }

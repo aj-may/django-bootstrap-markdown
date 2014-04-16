@@ -1,5 +1,7 @@
 from django.forms import Textarea
-from django.utils.safestring import mark_safe
+from django.template import Context
+from django.template.loader import get_template
+# from django.utils.safestring import mark_safe
 
 
 class MarkdownInput(Textarea):
@@ -8,7 +10,6 @@ class MarkdownInput(Textarea):
 
         default_attrs = {
             'class': 'form-control',
-            'style': 'height: 400px; resize: none; font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-weight: bold;',
         }
         if attrs:
             default_attrs.update(attrs)
@@ -18,33 +19,13 @@ class MarkdownInput(Textarea):
     def render(self, name, value, attrs=None):
         textarea = Textarea.render(self, name, value)
 
-        if self.image_control:
-            image_control_markup = """
-            <div class="pull-right">
-                <button type="button" class="btn btn-sm btn-default markdown-image-btn">
-                    <span class="glyphicon glyphicon-picture"></span>
-                    Add Image
-                </button>
-            </div>
-            """
-        else:
-            image_control_markup = ""
+        t = get_template('django_bootstrap_markdown/widget.html')
+        c = Context({
+            'show_image_button': self.image_control,
+            'textarea': textarea,
+        })
 
-        markup = """
-        <div class="row md-edit">
-            <div class="col-sm-6">
-                %s
-                <h5 class="text-muted">Markdown</h5>
-                %s
-            </div>
-            <div class="col-sm-6 hidden-xs">
-                <h5 class="text-muted">Preview</h5>
-                <div class="form-control preview" style="height: 400px; overflow: auto;"></div>
-            </div>
-        </div>
-        """ % (image_control_markup, textarea)
-
-        return mark_safe(markup)
+        return t.render(c)
 
     class Media:
         js = (

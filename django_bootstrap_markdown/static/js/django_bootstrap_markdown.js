@@ -23,7 +23,7 @@ $.fn.extend({
 			$image_button.click(function() {
 				window.markdown_textarea = $(this).parent().parent().find('textarea');
 				window.markdown_cursor_pos = $(window.markdown_textarea).prop('selectionStart');
-				window.open('/markdown/image/');
+				window.open($(this).attr('data-href'));
 			});
 			$textarea.on('keyup change', function() {
 				update();
