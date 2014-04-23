@@ -51,4 +51,4 @@ window.markdown_image_callback = function(sized, original, alt) {
     var textAfter  = v.substring(window.markdown_cursor_pos, v.length);
     $(window.markdown_textarea).val( textBefore+ "[!["+alt+"]("+sized+")]("+original+")" +textAfter );
     $(window.markdown_textarea).keyup();
-}
+};
