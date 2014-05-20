@@ -13,25 +13,21 @@ class Image(models.Model):
         source='original',
         processors=[Transpose(), ResizeToFit(750, 400, upscale=False)],
         options={'quality': 85},
-        verbose_name=_(u'Large Image')
     )
     medium = ImageSpecField(
         source='original',
         processors=[Transpose(), ResizeToFit(375, 400, upscale=False)],
         options={'quality': 85},
-        verbose_name=_(u'Medium Image')
     )
     small = ImageSpecField(
         source='original',
         processors=[Transpose(), ResizeToFit(185, 400, upscale=False)],
         options={'quality': 85},
-        verbose_name=_(u'Small Image')
     )
     billboard = ImageSpecField(
         source='original',
         processors=[Transpose(), SmartResize(750, 300)],
         options={'quality': 85},
-        verbose_name=_(u'Billboard Image')
     )
     description = models.CharField(
         max_length=200,
@@ -46,4 +42,3 @@ class Image(models.Model):
         ordering = ['-timestamp']
         verbose_name = _(u'image')
         verbose_name_plural = _(u'images')
-        app_label = _(u'Django Bootstrap Markdown')

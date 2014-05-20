@@ -6,7 +6,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2014-05-20 13:03-0400\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-20 14:09-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: A.J. May <aj7may@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,7 @@ msgstr ""
 msgid "Image"
 msgstr "Image"
 
-#: forms.py:15 models.py:38
+#: forms.py:15 models.py:34
 msgid "Description"
 msgstr "Description"
 
@@ -49,37 +50,17 @@ msgstr "Size"
 msgid "Original Image"
 msgstr "Original Image"
 
-#: models.py:16
-msgid "Large Image"
-msgstr "Large Image"
-
-#: models.py:22
-msgid "Medium Image"
-msgstr "Medium Image"
-
-#: models.py:28
-msgid "Small Image"
-msgstr "Small Image"
-
-#: models.py:34
-msgid "Billboard Image"
-msgstr "Billboard Image"
-
-#: models.py:42
+#: models.py:38
 msgid "Timestamp"
 msgstr "Timestamp"
 
-#: models.py:47
+#: models.py:43
 msgid "image"
 msgstr "image"
 
-#: models.py:48
+#: models.py:44
 msgid "images"
 msgstr "images"
-
-#: models.py:49
-msgid "Django Bootstrap Markdown"
-msgstr "Djnago Bootstrap Markdown"
 
 #: templates/django_bootstrap_markdown/markdown_image.html:6
 #: templates/django_bootstrap_markdown/markdown_image.html:27
