@@ -4,6 +4,8 @@ import os
 from setuptools import setup, find_packages
 
 
+readme = open('README.rst').read()
+
 setup(
     name="django-bootstrap-markdown",
     version="1.5.3",
@@ -14,9 +16,7 @@ setup(
     maintainer_email="aj7may@gmail.com",
     description="""An extension of the Django Textarea widget made for
     editing Markdown with a live preview.""",
-    long_description=read(
-        os.path.join(os.path.dirname(__file__), 'README.md')
-    ),
+    long_description=readme,
     license="MIT License",
     keywords="django bootstrap markdown live preview auto scroll",
     url="http://thegoods.aj7may.com/django-bootstrap-markdown",
