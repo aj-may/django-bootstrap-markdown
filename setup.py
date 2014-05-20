@@ -1,14 +1,23 @@
+#!/usr/bin/env python
+
+import os
 from setuptools import setup, find_packages
 
 
 setup(
     name="django-bootstrap-markdown",
-    version="1.5.1",
+    version="1.5.3",
     packages=find_packages(),
     author="A.J. May",
     author_email="aj7may@gmail.com",
-    description="An extension of the Django Textarea widget made for editing Markdown with a live preview.",
-    license="Creative Commons Attribution-ShareAlike 4.0 International License",
+    maintainer="A.J. May",
+    maintainer_email="aj7may@gmail.com",
+    description="""An extension of the Django Textarea widget made for
+    editing Markdown with a live preview.""",
+    long_description=read(
+        os.path.join(os.path.dirname(__file__), 'README.md')
+    ),
+    license="MIT License",
     keywords="django bootstrap markdown live preview auto scroll",
     url="http://thegoods.aj7may.com/django-bootstrap-markdown",
     zip_safe=False,
@@ -20,9 +29,15 @@ setup(
         ],
     },
     install_requires=[
-        'Django>=1.6.1',
         'Pillow>=2.2.2',
-        'South>=0.8.4',
         'django-imagekit>=3.1'
     ],
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ]
 )

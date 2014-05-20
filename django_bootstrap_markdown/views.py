@@ -1,14 +1,10 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.decorators import login_required
 from django_bootstrap_markdown.models import Image
 from django_bootstrap_markdown.forms import ImageForm, LibraryForm
 
 
-def is_staff(user):
-    return user.is_staff
-
-
-@user_passes_test(is_staff)
+@login_required
 def markdown_image(request):
     if request.method == 'POST':
         form = ImageForm(request.POST, request.FILES)
@@ -45,7 +41,7 @@ def markdown_image(request):
     })
 
 
-@user_passes_test(is_staff)
+@login_required
 def markdown_library(request):
     if request.method == 'POST':
         form = LibraryForm(request.POST)
