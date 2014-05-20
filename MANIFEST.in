@@ -1,0 +1,4 @@
+recursive-include django_bootstrap_markdown/templates *
+recursive-include django_bootstrap_markdown/static *
+recursive-include django_bootstrap_markdown/locale *.mo
+include README.md
