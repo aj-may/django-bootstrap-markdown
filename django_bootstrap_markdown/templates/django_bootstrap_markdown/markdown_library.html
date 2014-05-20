@@ -1,9 +1,10 @@
+{% load i18n %}
 {% extends 'django_bootstrap_markdown/markdown_image.html' %}
 
 {% block content %}
 {% if not image %}
 <div class="col-xs-12">
-<h1>Insert Image</h1>
+<h1>{% trans "Insert Image" %}</h1>
 
 <div class="markdown-library-chooser">
 	{% for image in images %}
@@ -13,9 +14,9 @@
 
 <form role="form" method="POST">
   {% include "django_bootstrap_markdown/markdown_form.html" with form=form %}
-  <button type="button" class="btn btn-default pull-right" onclick="window.close();">Cancel</button>
-  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-circle-arrow-down"></span> Insert Image</button>
-  or <a href="{% url 'django_bootstrap_markdown.views.markdown_image' %}">Upload a new Image</a>
+  <button type="button" class="btn btn-default pull-right" onclick="window.close();">{% trans "Cancel" %}</button>
+  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-circle-arrow-down"></span> {% trans "Insert Image" %}</button>
+  {% trans "or" %} <a href="{% url 'django_bootstrap_markdown.views.markdown_image' %}">{% trans "Upload a new Image" %}</a>
 </form>
 </div>
 {% endif %}

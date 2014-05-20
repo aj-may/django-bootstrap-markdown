@@ -1,7 +1,6 @@
 from django.forms import Textarea
 from django.template import Context
 from django.template.loader import get_template
-# from django.utils.safestring import mark_safe
 
 
 class MarkdownInput(Textarea):

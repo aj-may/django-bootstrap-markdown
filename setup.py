@@ -19,7 +19,7 @@ except ImportError:
 
 setup(
     name="django-bootstrap-markdown",
-    version="1.5.4",
+    version="1.6.0",
     packages=find_packages(),
     author="A.J. May",
     author_email="aj7may@gmail.com",
@@ -32,13 +32,7 @@ setup(
     keywords="django bootstrap markdown live preview auto scroll",
     url="http://thegoods.aj7may.com/django-bootstrap-markdown",
     zip_safe=False,
-    package_data={
-        'django_bootstrap_markdown': [
-            'static/js/*',
-            'static/css/*',
-            'templates/django_bootstrap_markdown/*'
-        ],
-    },
+    include_package_data=True,
     install_requires=[
         'Pillow>=2.2.2',
         'django-imagekit>=3.1'

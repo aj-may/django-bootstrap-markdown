@@ -48,13 +48,13 @@ def markdown_library(request):
         if form.is_valid():
             image = form.cleaned_data['image']
 
-            if form.cleaned_data['size'] == 'Small':
+            if form.cleaned_data['size'] == 'small':
                 thumbnail = image.small
-            elif form.cleaned_data['size'] == 'Medium':
+            elif form.cleaned_data['size'] == 'medium':
                 thumbnail = image.medium
-            elif form.cleaned_data['size'] == 'Large':
+            elif form.cleaned_data['size'] == 'large':
                 thumbnail = image.large
-            elif form.cleaned_data['size'] == 'Original':
+            elif form.cleaned_data['size'] == 'original':
                 thumbnail = image.original
             else:
                 thumbnail = image.billboard

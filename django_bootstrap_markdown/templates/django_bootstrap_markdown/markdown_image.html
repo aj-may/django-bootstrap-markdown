@@ -1,8 +1,9 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Insert Image</title>
+    <title>{% trans "Insert Image" %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
@@ -23,12 +24,12 @@
       {% block content %}
       {% if not image %}
       <div class="col-xs-12">
-        <h1>Insert Image</h1>
+        <h1>{% trans "Insert Image" %}</h1>
         <form role="form" enctype="multipart/form-data" method="POST">
           {% include "django_bootstrap_markdown/markdown_form.html" with form=form %}
-          <button type="button" class="btn btn-default pull-right" onclick="window.close();">Cancel</button>
-          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Upload</button>
-          or <a href="{% url 'django_bootstrap_markdown.views.markdown_library' %}">Choose from Media Library</a>
+          <button type="button" class="btn btn-default pull-right" onclick="window.close();">{% trans "Cancel" %}</button>
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> {% trans "Upload" %}</button>
+          {% trans "or" %} <a href="{% url 'django_bootstrap_markdown.views.markdown_library' %}">{% trans "Choose from Media Library" %}</a>
         </form>
       </div>
       {% endif %}
