@@ -6,8 +6,11 @@ python:
 
 install:
   - script/bootstrap
+  - pip install coveralls
 
 script: script/test
+
+after_success: coveralls
 
 notifications:
   email:
