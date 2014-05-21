@@ -35,7 +35,8 @@ nosetests.xml
 .project
 .pydevproject
 
+# Databases
 *.sqlite3
 
+# User Uploads
 media
-test_project
