@@ -3,6 +3,7 @@
 ## A beautiful Markdown editor with a side by side preview
 
 [![Build Status](https://travis-ci.org/aj7may/django-bootstrap-markdown.svg?branch=master)](https://travis-ci.org/aj7may/django-bootstrap-markdown)
+[![Coverage Status](https://coveralls.io/repos/aj7may/django-bootstrap-markdown/badge.png?branch=master)](https://coveralls.io/r/aj7may/django-bootstrap-markdown?branch=master)
 
 An extension of the Django Textarea widget made for editing [Markdown](http://daringfireball.net/projects/markdown/) with a live preview.
 
