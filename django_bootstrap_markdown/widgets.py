@@ -29,13 +29,13 @@ class MarkdownInput(Textarea):
     class Media:
         js = (
             '//cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js',
-            '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.js',
+            '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.js',  # noqa
             'js/jquery.textarea.min.js',
             'js/django_bootstrap_markdown.js',
         )
         css = {
             'all': (
-                '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.css',
+                '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.css',  # noqa
                 'css/django_bootstrap_markdown.css',
             )
         }

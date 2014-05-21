@@ -10,7 +10,7 @@ try:
         try:
             d = convert(f, 'rst')
         except OSError:
-            print("warning: You do not have pandoc installed, could not convert README.") 
+            print("warning: Pandoc not installed, couldn't convert README.")
             d = open(f, 'r').read()
         return d
 except ImportError:
@@ -19,7 +19,7 @@ except ImportError:
 
 setup(
     name="django-bootstrap-markdown",
-    version="1.6.0",
+    version="1.6.1",
     packages=find_packages(),
     author="A.J. May",
     author_email="aj7may@gmail.com",
