@@ -10,4 +10,5 @@ install:
 script: script/test
 
 notifications:
-  email: true
+  email:
+    - aj7may@gmail.com
