@@ -19,7 +19,7 @@ except ImportError:
 
 setup(
     name="django-bootstrap-markdown",
-    version="1.6.1",
+    version="1.7.0",
     packages=find_packages(),
     author="A.J. May",
     author_email="aj7may@gmail.com",
