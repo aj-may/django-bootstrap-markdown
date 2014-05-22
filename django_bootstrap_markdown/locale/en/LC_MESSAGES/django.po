@@ -1,0 +1,108 @@
+# English translations for Django Bootstrap Markdown.
+# Copyright (C) 2014 A.J. May
+# This file is distributed under the same license as the Django Bootstrap Markdown package.
+# A.J. May <aj7may@gmail.com>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-21 23:05-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: A.J. May <aj7may@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:7 forms.py:35
+msgid "Image"
+msgstr "Image"
+
+#: forms.py:12
+msgid "a short description of the image for screen readers and search engines"
+msgstr "a short description of the image for screen readers and search engines"
+
+#: forms.py:15 models.py:34
+msgid "Description"
+msgstr "Description"
+
+#: forms.py:20 forms.py:40
+msgid "Billboard"
+msgstr "Billboard"
+
+#: forms.py:21 forms.py:41
+msgid "Small"
+msgstr "Small"
+
+#: forms.py:22 forms.py:42
+msgid "Medium"
+msgstr "Medium"
+
+#: forms.py:23 forms.py:43
+msgid "Large"
+msgstr "Large"
+
+#: forms.py:24 forms.py:44
+msgid "Original"
+msgstr "Original"
+
+#: forms.py:27 forms.py:47
+msgid "Size"
+msgstr "Size"
+
+#: models.py:10
+msgid "Original Image"
+msgstr "Original Image"
+
+#: models.py:38
+msgid "Timestamp"
+msgstr "Timestamp"
+
+#: models.py:43
+msgid "image"
+msgstr "image"
+
+#: models.py:44
+msgid "images"
+msgstr "images"
+
+#: templates/django_bootstrap_markdown/markdown_image.html:6
+#: templates/django_bootstrap_markdown/markdown_image.html:27
+#: templates/django_bootstrap_markdown/markdown_library.html:7
+#: templates/django_bootstrap_markdown/markdown_library.html:18
+msgid "Insert Image"
+msgstr "Insert Image"
+
+#: templates/django_bootstrap_markdown/markdown_image.html:30
+#: templates/django_bootstrap_markdown/markdown_library.html:17
+msgid "Cancel"
+msgstr "Cancel"
+
+#: templates/django_bootstrap_markdown/markdown_image.html:31
+msgid "Upload"
+msgstr "Upload"
+
+#: templates/django_bootstrap_markdown/markdown_image.html:32
+#: templates/django_bootstrap_markdown/markdown_library.html:19
+msgid "or"
+msgstr "or"
+
+#: templates/django_bootstrap_markdown/markdown_image.html:32
+msgid "Choose from Media Library"
+msgstr "Choose from Media Library"
+
+#: templates/django_bootstrap_markdown/markdown_library.html:19
+msgid "Upload a new Image"
+msgstr "Upload a new Image"
+
+#: templates/django_bootstrap_markdown/widget.html:8
+msgid "Add Image"
+msgstr "Add Image"
+
+#: templates/django_bootstrap_markdown/widget.html:13
+msgid "Markdown"
+msgstr "Markdown"
+
+#: templates/django_bootstrap_markdown/widget.html:17
+msgid "Preview"
+msgstr "Preview"

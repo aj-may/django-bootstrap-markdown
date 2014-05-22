@@ -9,8 +9,8 @@ class ImageForm(forms.Form):
         required=False,
         widget=forms.TextInput(attrs={
             'class': 'form-control',
-            'placeholder': 'a short description of the image for screen ' +
-            'readers and search engines',
+            'placeholder': _('a short description of the image for screen ' +
+            'readers and search engines'),
         }),
         label=_(u'Description')
     )
