@@ -9,6 +9,11 @@ class Image(models.Model):
         upload_to='markdown/images/',
         verbose_name=_(u'Original Image')
     )
+    xlarge = ImageSpecField(
+        source='original',
+        processors=[Transpose(), ResizeToFit(1200, 800, upscale=False)],
+        options={'quality': 90},
+    )
     large = ImageSpecField(
         source='original',
         processors=[Transpose(), ResizeToFit(750, 400, upscale=False)],
@@ -26,7 +31,7 @@ class Image(models.Model):
     )
     billboard = ImageSpecField(
         source='original',
-        processors=[Transpose(), SmartResize(750, 300)],
+        processors=[Transpose(), SmartResize(1170, 300)],
         options={'quality': 85},
     )
     description = models.CharField(

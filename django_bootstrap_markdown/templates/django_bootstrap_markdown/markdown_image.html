@@ -46,7 +46,7 @@
 
     {% if image %}
     <script type="text/javascript">
-      window.opener.markdown_image_callback("{{ thumbnail.url }}", "{{ image.original.url }}", "{{ image.description }}");
+      window.opener.markdown_image_callback("{{ thumbnail.url }}", "{{ image.xlarge.url }}", "{{ image.description }}");
       window.close()
     </script>
     {% endif %}
