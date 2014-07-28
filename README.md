@@ -3,7 +3,7 @@
 ## A beautiful Markdown editor with a side by side preview
 
 [![Build Status](http://img.shields.io/travis/aj-may/django-bootstrap-markdown.svg)](https://travis-ci.org/aj-may/django-bootstrap-markdown)
-[![Coverage Status](http://img.shields.io/coveralls/aj-may/django-bootstrap-markdown.svg)](https://coveralls.io/r/aj-may/django-bootstrap-markdown)
+[![Coverage Status](http://img.shields.io/coveralls/aj-may/django-bootstrap-markdown/master.svg)](https://coveralls.io/r/aj-may/django-bootstrap-markdown)
 [![Code Climate](http://img.shields.io/codeclimate/github/aj-may/django-bootstrap-markdown.svg)](https://codeclimate.com/github/aj-may/django-bootstrap-markdown)
 [![License](http://img.shields.io/pypi/l/django-bootstrap-markdown.svg)](https://github.com/aj-may/django-bootstrap-markdown/blob/master/LICENSE.md)
 [![Version](http://img.shields.io/pypi/v/django-bootstrap-markdown.svg)](https://pypi.python.org/pypi/django-bootstrap-markdown)
