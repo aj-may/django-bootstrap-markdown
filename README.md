@@ -2,8 +2,19 @@
 
 ## A beautiful Markdown editor with a side by side preview
 
-[![Build Status](https://travis-ci.org/aj7may/django-bootstrap-markdown.svg?branch=master)](https://travis-ci.org/aj7may/django-bootstrap-markdown)
-[![Coverage Status](https://coveralls.io/repos/aj7may/django-bootstrap-markdown/badge.png?branch=master)](https://coveralls.io/r/aj7may/django-bootstrap-markdown?branch=master)
+[![Build Status](http://img.shields.io/travis/aj-may/django-bootstrap-markdown.svg)](https://travis-ci.org/aj-may/django-bootstrap-markdown)
+
+[![Coverage Status](http://img.shields.io/coveralls/aj-may/django-bootstrap-markdown.svg)](https://coveralls.io/r/aj-may/django-bootstrap-markdown)
+
+[![Code Climate](http://img.shields.io/codeclimate/github/aj-may/django-bootstrap-markdown.svg)](https://codeclimate.com/github/aj-may/django-bootstrap-markdown)
+
+[License](http://img.shields.io/pypi/l/django-bootstrap-markdown.svg)
+
+[Version](http://img.shields.io/pypi/v/django-bootstrap-markdown.svg)
+
+[PyPI Downloads](http://img.shields.io/pypi/dm/django-bootstrap-markdown.svg)
+
+[![GitTip](http://img.shields.io/gittip/aj_may.svg)](https://www.gittip.com/aj_may/)
 
 An extension of the Django Textarea widget made for editing [Markdown](http://daringfireball.net/projects/markdown/) with a live preview.
 
