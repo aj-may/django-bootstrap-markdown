@@ -13,17 +13,7 @@ def markdown_image(request):
             image.original = form.cleaned_data['image']
             image.description = form.cleaned_data['description']
             image.save()
-
-            if form.cleaned_data['size'] == 'small':
-                thumbnail = image.small
-            elif form.cleaned_data['size'] == 'medium':
-                thumbnail = image.medium
-            elif form.cleaned_data['size'] == 'large':
-                thumbnail = image.large
-            elif form.cleaned_data['size'] == 'original':
-                thumbnail = image.original
-            else:
-                thumbnail = image.billboard
+            thumbnail = getattr(image, form.cleaned_data['size'])
 
             return render(
                 request,
@@ -47,17 +37,7 @@ def markdown_library(request):
         form = LibraryForm(request.POST)
         if form.is_valid():
             image = form.cleaned_data['image']
-
-            if form.cleaned_data['size'] == 'small':
-                thumbnail = image.small
-            elif form.cleaned_data['size'] == 'medium':
-                thumbnail = image.medium
-            elif form.cleaned_data['size'] == 'large':
-                thumbnail = image.large
-            elif form.cleaned_data['size'] == 'original':
-                thumbnail = image.original
-            else:
-                thumbnail = image.billboard
+            thumbnail = getattr(image, form.cleaned_data['size'])
 
             return render(
                 request,
